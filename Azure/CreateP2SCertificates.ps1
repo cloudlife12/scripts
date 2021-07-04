@@ -23,10 +23,6 @@ If(!(test-path $workingPath))
       New-Item -ItemType Directory -Force -Path $workingPath
 }
 
-
-
-
-
 foreach ($user in $users) {
     ## A friendly Name for the person or device we are generating the certificate for
     $name = $user
@@ -56,3 +52,7 @@ foreach ($user in $users) {
     Add-AzVpnClientRootCertificate -VpnClientRootCertificateName $name -VirtualNetworkGatewayName $VPNGatewayName -ResourceGroupName $resourceGroup -PublicCertData $CertBase64_3
 
 }
+
+## Download the VPN client 
+$vpnclient = New-AzVpnClientConfiguration -ResourceGroupName $resourceGroup -name $VPNGatewayName -AuthenticationMethod "EapTls"
+wget $vpnclient.VpnProfileSASUrl -OutFile $workingPath\vpnclient.zip
