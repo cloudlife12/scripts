@@ -1,5 +1,5 @@
 #############################################################
-# Created By: Daniel Wroe                                   #
+# Created By: Dan - Cloudlife.co.uk                         #
 # Date: 04/07/2021                                          #
 # Description: Script to create a VPN Gateway Lab           #
 # Note: This script can take up to 1 hour to privision the  #
