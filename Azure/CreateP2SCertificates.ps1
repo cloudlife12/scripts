@@ -1,5 +1,5 @@
 #############################################################
-# Created By: Dan - Cloudlife                               #
+# Created By: Dan - Cloudlife.co.uk                         #
 # Date: 04/07/2021                                          #
 # Description: Script to create VPN certificates for an     #
 #              Azure P2S VPN                                #
